@@ -1,0 +1,17 @@
+	{
+		"cluster1": {
+			"source": "prometheus",
+			"query": "argocd_app_info{cluster=~\"cluster1\"}",
+			"aggregate":"sum",
+			"threshold": 10,
+			"offset": [1, 2, 7]
+		},
+	
+		"cluster2": {
+			"source": "prometheus",
+			"query": "argocd_app_info{cluster=~\"cluster2\"}",
+			"aggregate":"sum",
+			"threshold": 10,
+			"offset": [1, 7]
+		}
+	}
